@@ -1,0 +1,14 @@
+services:
+  clippr:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - CLIPPR_TEMP_DIR=/data/clippr
+    volumes:
+      - clippr_data:/data/clippr
+    restart: unless-stopped
+
+volumes:
+  clippr_data:

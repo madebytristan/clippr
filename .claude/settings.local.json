@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo list:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python -m pip install:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(winget install:*)",
+      "Bash(scoop install:*)",
+      "Bash(choco install:*)",
+      "Bash(export PATH=\"$PATH:/c/Users/tristan/AppData/Local/Microsoft/WinGet/Links\")",
+      "Bash(yt-dlp:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(YTDLP=\"/c/Users/tristan/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe/yt-dlp.exe\")",
+      "Bash(FFMPEG=\"/c/Users/tristan/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-122609-g364d5dda91-win64-gpl/bin/ffmpeg.exe\")",
+      "Bash(\"$YTDLP\" --version)",
+      "Bash(\"$FFMPEG\" -version)",
+      "Bash(\"/c/Users/tristan/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe/yt-dlp.exe\" --version)",
+      "Bash(\"/c/Users/tristan/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-122609-g364d5dda91-win64-gpl/bin/ffmpeg.exe\" -version)",
+      "Bash(\"$YTDLP\" --list-subs --no-playlist \"https://www.youtube.com/watch?v=ZNWn4p--HV0\")",
+      "Bash(\"/c/Users/tristan/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe/yt-dlp.exe\" --list-subs --no-playlist \"https://www.youtube.com/watch?v=ZNWn4p--HV0\")",
+      "Bash(npm install:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:wayin.ai)",
+      "WebFetch(domain:toolscompare.ai)",
+      "WebFetch(domain:aiwith.me)",
+      "WebFetch(domain:web.archive.org)",
+      "Bash(git add:*)",
+      "Bash(xargs:*)",
+      "Bash(git -C \"C:\\\\Users\\\\tristan\\\\Documents\\\\Clippr\" remote -v)",
+      "Bash(git -C \"C:\\\\Users\\\\tristan\\\\Documents\\\\Clippr\\\\.claude\\\\worktrees\\\\jolly-lumiere\" log --oneline -5)"
+    ]
+  }
+}
