@@ -6,9 +6,6 @@ import Link from "next/link";
 import { ClerkSignUpCTA, ClerkHeroCTA } from "@/components/ClerkAuthArea";
 import AppShell from "@/components/AppShell";
 
-const CLERK_CONFIGURED =
-  (process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "").length > 10 &&
-  !(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "").includes("REPLACE_ME");
 
 // ── Gallery data — add images to /public/gallery/ and list them here ──────────
 
@@ -405,27 +402,7 @@ export default function LandingPage() {
 
             {/* Auth CTAs */}
             <div className="mt-6">
-              {CLERK_CONFIGURED ? (
-                <ClerkHeroCTA />
-              ) : (
-                <div className="flex items-center gap-3">
-                  <Link
-                    href="/sign-up"
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-accent hover:bg-accent-hover text-white text-sm font-semibold shadow-[0_0_20px_4px_rgba(124,58,237,0.35)]"
-                  >
-                    Create Account
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </Link>
-                  <Link
-                    href="/sign-in"
-                    className="px-6 py-2.5 rounded-full border border-surface-border text-sm text-gray-300 hover:border-accent/50 hover:text-white font-medium transition-colors"
-                  >
-                    Log In
-                  </Link>
-                </div>
-              )}
+              <ClerkHeroCTA />
             </div>
           </section>
 
@@ -452,13 +429,7 @@ export default function LandingPage() {
                 <h2 className="text-white text-xl font-bold">Workflows To Go Viral</h2>
                 <p className="text-gray-500 text-sm mt-0.5">Example: See how to generate a clipped highlight reel</p>
               </div>
-              {CLERK_CONFIGURED ? (
-                <ClerkSignUpCTA className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-semibold shrink-0" />
-              ) : (
-                <Link href="/app" className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-semibold shrink-0">
-                  Try Free
-                </Link>
-              )}
+              <ClerkSignUpCTA className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-semibold shrink-0" />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
