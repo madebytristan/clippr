@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const jpeg = await extractFrame(resolvedPath, time);
-    return new NextResponse(jpeg, {
+    return new NextResponse(new Uint8Array(jpeg), {
       headers: {
         "Content-Type": "image/jpeg",
         "Cache-Control": "public, max-age=86400, immutable",

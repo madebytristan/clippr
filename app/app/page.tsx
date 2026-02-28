@@ -639,7 +639,7 @@ export default function AppPage() {
         )}
 
         {/* Transcript + Sections */}
-        {(transcript.length > 0 || step === "analyzing") && (
+        {transcript.length > 0 && (
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-surface-card border border-surface-border rounded-xl p-6 flex flex-col">
               <div className="flex items-center justify-between mb-4">
@@ -661,7 +661,7 @@ export default function AppPage() {
                 <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">AI Sections</h2>
                 {sections.length > 0 && <Badge>{sections.length} sections</Badge>}
               </div>
-              {step === "analyzing" && sections.length === 0 ? (
+              {(step as string) === "analyzing" && sections.length === 0 ? (
                 <div className="flex-1 flex items-center justify-center text-gray-500 text-sm gap-2">
                   <Spinner /> Analyzing transcript with AI…
                 </div>
