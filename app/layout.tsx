@@ -7,24 +7,12 @@ export const metadata: Metadata = {
   description: "Auto-clip YouTube videos by section, generate transcripts, reframe for any aspect ratio.",
 };
 
-const CLERK_CONFIGURED =
-  (process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "").length > 10 &&
-  !(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "").includes("REPLACE_ME");
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  if (CLERK_CONFIGURED) {
-    return (
-      <ClerkProvider>
-        <html lang="en">
-          <body className="min-h-screen antialiased">{children}</body>
-        </html>
-      </ClerkProvider>
-    );
-  }
-
   return (
-    <html lang="en">
-      <body className="min-h-screen antialiased">{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="min-h-screen antialiased">{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
